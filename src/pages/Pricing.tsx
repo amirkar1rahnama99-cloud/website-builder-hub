@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -25,13 +26,13 @@ const tiers = [
   },
   {
     name: "Professional",
-    price: "Per-node/year",
+    price: "Contact Us",
     sub: "Most Popular",
     highlight: true,
     cta: "Start Free Trial",
     features: [
       "Everything in Community, plus:",
-      "All 56 operators (Integration, Data packs)",
+      "All 57 operators (Integration, Data, Search packs)",
       "Script extensions (Python/PowerShell)",
       "API Key authentication",
       "S3/Minio storage",
@@ -43,8 +44,8 @@ const tiers = [
   },
   {
     name: "Enterprise",
-    price: "Per-node/year",
-    sub: "Volume discounts",
+    price: "Contact Us",
+    sub: "Volume discounts available",
     highlight: false,
     cta: "Contact Sales",
     features: [
@@ -78,7 +79,7 @@ const tiers = [
 const comparisonRows = [
   ["Data sovereignty", "Full control. Data never leaves your network.", "Data hosted in your chosen region."],
   ["Deployment", "You manage. Systemd/Docker/Windows Service.", "We manage everything."],
-  ["Pricing", "Flat per-node/year. Predictable.", "Usage-based. Variable."],
+  ["Pricing", "Predictable per-node licensing.", "Usage-based. Variable."],
   ["Updates", "Manual (download new binary, restart).", "Automatic rolling updates."],
   ["Scaling", "Single-node (vertical scaling).", "Auto-scaling (horizontal)."],
   ["Best for", "Regulated industries, DACH market, air-gapped networks.", "Startups, cloud-native teams, rapid scaling."],
@@ -107,6 +108,7 @@ const Pricing = () => {
 
   return (
     <Layout>
+      <SEO title="Pricing — Zenvara" description="Free Community tier. Professional and Enterprise for production. On-premise or cloud. Predictable per-node pricing." />
       {/* Hero */}
       <section className="bg-background py-20 md:py-32">
         <div className="container text-center">

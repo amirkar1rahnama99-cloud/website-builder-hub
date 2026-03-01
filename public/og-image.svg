@@ -1,0 +1,14 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#1a1a3e"/>
+  <text x="600" y="260" text-anchor="middle" font-family="Outfit, Inter, system-ui, sans-serif" font-size="72" font-weight="300" fill="#ffffff">Zenvara</text>
+  <text x="600" y="340" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="28" fill="#e8e4df">Orchestration you can reason about.</text>
+  <text x="600" y="400" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="18" fill="#6b6b7b">56 operators  ·  88 MCP tools  ·  built-in AI</text>
+  <!-- Convergence mark -->
+  <path d="M540 460L580 480" stroke="#1a1a3e" stroke-width="3" stroke-linecap="round"/>
+  <path d="M540 500L580 480" stroke="#1a1a3e" stroke-width="3" stroke-linecap="round"/>
+  <path d="M540 480L580 480" stroke="#1a1a3e" stroke-width="3" stroke-linecap="round"/>
+  <path d="M580 480L620 480" stroke="#f0a830" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="580" cy="480" r="5" fill="#f0a830"/>
+  <!-- Amber accent line -->
+  <rect x="500" y="540" width="200" height="2" rx="1" fill="#f0a830" opacity="0.5"/>
+</svg>

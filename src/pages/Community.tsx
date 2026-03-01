@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Github, MessageCircle, Users, Map } from "lucide-react";
 
@@ -10,6 +11,7 @@ const roadmapItems = [
 
 const Community = () => (
   <Layout>
+    <SEO title="Community — Zenvara" description="Join the Zenvara community. Contribute operators, share pipelines, and help shape the future of calm orchestration." />
     <section className="bg-background py-20 md:py-32">
       <div className="container text-center">
         <h1 className="font-display font-light text-4xl md:text-5xl text-foreground mb-4">
@@ -28,8 +30,8 @@ const Community = () => (
             <Github className="text-primary mx-auto mb-4" size={40} />
             <h2 className="font-display text-xl font-semibold text-foreground mb-2">GitHub</h2>
             <p className="text-sm text-muted-foreground mb-6">Star, fork, contribute. The source is open.</p>
-            <Button variant="outline" className="rounded-lg border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold">
-              View on GitHub
+            <Button asChild variant="outline" className="rounded-lg border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold">
+              <a href="https://github.com/zenvara/zenvara" target="_blank" rel="noopener noreferrer">View on GitHub</a>
             </Button>
           </div>
 
@@ -37,8 +39,8 @@ const Community = () => (
             <MessageCircle className="text-accent mx-auto mb-4" size={40} />
             <h2 className="font-display text-xl font-semibold text-foreground mb-2">Discord</h2>
             <p className="text-sm text-muted-foreground mb-6">Ask questions. Share pipelines. Meet the team.</p>
-            <Button className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-lg font-semibold">
-              Join Discord
+            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-lg font-semibold">
+              <a href="https://discord.gg/zenvara" target="_blank" rel="noopener noreferrer">Join Discord</a>
             </Button>
           </div>
 

@@ -14,8 +14,14 @@ const rows = [
   ["Rollback", "Built-in", false, false, "Handlers", false],
   ["Secrets", "AES-256-GCM", "Sensitive props", "Key Vault", "Vault", "Connections"],
   ["Auth providers", "5", "3", "Azure AD", "3", "3"],
+  ["Staging/deploy", "Built-in", "Version control", "CI/CD", "Promotion APIs", "Git-based"],
   ["Script extensions", "Py + PS", "Scripted", "Custom", "Policies", "Python ops"],
+  ["Visual designer", "Roadmap (2.0)", true, true, true, false],
+  ["Horizontal scaling", false, true, true, true, true],
+  ["State persistence", "Built-in", false, false, "Object Store", "XCom"],
+  ["Human-in-the-loop", true, false, false, false, false],
   ["JVM required", false, true, "N/A", true, false],
+  ["Pricing", "Open-core", "Free (ASF)", "$$", "$$$", "Free (ASF)"],
 ];
 
 const CellValue = ({ val }: { val: string | boolean }) => {

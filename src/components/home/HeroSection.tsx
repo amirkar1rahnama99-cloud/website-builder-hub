@@ -134,14 +134,14 @@ const HeroSection = () => (
         Orchestration you can reason about.
       </h1>
       <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-        56 operators. 88 MCP tools. One calm system.
+        57 operators. 88 MCP tools. One calm system.
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
         <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-lg font-semibold px-8 h-12 text-base">
           <Link to="/pricing">Get Started</Link>
         </Button>
         <Button asChild variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-lg font-semibold px-8 h-12 text-base">
-          <a href="#" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          <a href="https://github.com/zenvara/zenvara" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         </Button>
       </div>
       <HeroAnimation />

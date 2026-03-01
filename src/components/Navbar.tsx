@@ -60,7 +60,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-3">
             <span className="text-xs text-muted-foreground bg-muted px-3 py-1 rounded-full font-mono">
-              56 operators · 88 MCP tools · v1.0
+              57 operators · 88 MCP tools · v1.0
             </span>
             <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-lg font-semibold">
               <Link to="/pricing">Get Started</Link>

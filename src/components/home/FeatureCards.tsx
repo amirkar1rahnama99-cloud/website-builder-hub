@@ -2,7 +2,7 @@ import { Workflow, Eye, FunctionSquare, Shield, Waves, Plug } from "lucide-react
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const features = [
-  { dim: "zen", icon: Workflow, title: "Compose", desc: "YAML-defined DAG pipeline execution. 56 operators across 7 categories." },
+  { dim: "zen", icon: Workflow, title: "Compose", desc: "YAML-defined DAG pipeline execution. 57 operators across 8 categories." },
   { dim: "vara", icon: Eye, title: "Observe", desc: "Introspect every tool call. Know your system. Self-awareness built in." },
   { dim: "zen", icon: FunctionSquare, title: "Resolve", desc: "Expressions that preserve type. 16 built-in functions. Compiled, not interpreted." },
   { dim: "vara", icon: Shield, title: "Protect", desc: "AES-256-GCM secrets. Rollback on every write operator. RBAC with 5 auth providers." },

@@ -3,7 +3,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const metrics = [
   { target: 88000, label: "lines of F#", sub: "What takes 1.5M lines of Java, F# does in 88K", format: (n: number) => n.toLocaleString() },
-  { target: 56, label: "operators", sub: "Across 7 independent extension packs", format: (n: number) => String(n) },
+  { target: 57, label: "operators", sub: "Across 8 independent extension packs", format: (n: number) => String(n) },
   { target: 88, label: "MCP tools", sub: "A system AI agents can understand", format: (n: number) => String(n) },
   { target: 4, label: "deployment options", sub: "Source, binary, service, or Docker", format: (n: number) => String(n) },
 ];

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import CodeBlock from "@/components/CodeBlock";
 
 const codeExamples = [
   {
@@ -127,9 +128,7 @@ const MoreCodeExamples = () => {
             ))}
           </div>
 
-          <div className="bg-card border border-border rounded-lg p-4 overflow-x-auto">
-            <pre className="font-mono text-sm leading-relaxed text-foreground"><code>{codeExamples[active].code}</code></pre>
-          </div>
+          <CodeBlock code={codeExamples[active].code} language="yaml" showCopy={false} />
         </div>
       </div>
     </section>

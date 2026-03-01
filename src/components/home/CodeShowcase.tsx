@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Copy, Check } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import CodeBlock from "@/components/CodeBlock";
 
 const yamlCode = `version: "1.0"
 name: daily-report
@@ -40,15 +40,8 @@ const resultCode = `{
 }`;
 
 const CodeShowcase = () => {
-  const [copied, setCopied] = useState(false);
   const [ref, isVisible] = useScrollAnimation<HTMLDivElement>();
   const [activeTab, setActiveTab] = useState<"yaml" | "result">("yaml");
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(yamlCode);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
 
   return (
     <section className="bg-card py-20 md:py-28" ref={ref}>
@@ -75,24 +68,11 @@ const CodeShowcase = () => {
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           <div className={`${activeTab === "result" ? "hidden md:block" : ""}`}>
-            <div className="bg-primary text-primary-foreground rounded-t-lg px-4 py-2 flex items-center justify-between">
-              <span className="text-sm font-mono">job.yaml</span>
-              <button onClick={handleCopy} className="hover:text-accent transition-colors" aria-label="Copy code">
-                {copied ? <Check size={16} /> : <Copy size={16} />}
-              </button>
-            </div>
-            <div className="bg-card border border-border rounded-b-lg p-4 overflow-x-auto">
-              <pre className="font-mono text-sm leading-relaxed text-foreground"><code>{yamlCode}</code></pre>
-            </div>
+            <CodeBlock code={yamlCode} language="yaml" filename="job.yaml" />
           </div>
 
           <div className={`${activeTab === "yaml" ? "hidden md:block" : ""}`}>
-            <div className="bg-primary text-primary-foreground rounded-t-lg px-4 py-2">
-              <span className="text-sm font-mono">Result</span>
-            </div>
-            <div className="bg-card border border-border rounded-b-lg p-4 overflow-x-auto">
-              <pre className="font-mono text-sm leading-relaxed text-foreground"><code>{resultCode}</code></pre>
-            </div>
+            <CodeBlock code={resultCode} language="json" filename="Result" showCopy={false} />
           </div>
         </div>
 

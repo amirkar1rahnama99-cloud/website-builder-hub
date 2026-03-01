@@ -10,7 +10,7 @@ const footerLinks = {
     { label: "Features", href: "/features" },
     { label: "Pricing", href: "/pricing" },
     { label: "Docs", href: "/docs" },
-    { label: "Changelog", href: "#" },
+    { label: "Changelog", href: "/blog" },
     { label: "Roadmap", href: "/community" },
   ],
   Operators: [
@@ -20,18 +20,17 @@ const footerLinks = {
     { label: "Data", href: "/features#operators" },
     { label: "Integration", href: "/features#operators" },
     { label: "AI", href: "/features#operators" },
+    { label: "Search", href: "/features#operators" },
   ],
   Community: [
-    { label: "GitHub", href: "#" },
-    { label: "Discord", href: "#" },
+    { label: "GitHub", href: "https://github.com/zenvara/zenvara" },
+    { label: "Discord", href: "https://discord.gg/zenvara" },
     { label: "Blog", href: "/blog" },
     { label: "Contributing", href: "/community" },
   ],
   Company: [
-    { label: "About", href: "#" },
+    { label: "About", href: "/community" },
     { label: "Contact", href: "/pricing#contact" },
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
   ],
 };
 
@@ -68,12 +67,23 @@ const Footer = () => {
                 <ul className="space-y-2">
                   {links.map((link) => (
                     <li key={link.label}>
-                      <Link
-                        to={link.href}
-                        className="text-sm text-primary-foreground/50 hover:text-accent transition-colors"
-                      >
-                        {link.label}
-                      </Link>
+                      {link.href.startsWith("http") ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-primary-foreground/50 hover:text-accent transition-colors"
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link
+                          to={link.href}
+                          className="text-sm text-primary-foreground/50 hover:text-accent transition-colors"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -108,10 +118,10 @@ const Footer = () => {
             Built with F# and calm determination. &copy; 2026 Zenvara.
           </p>
           <div className="flex items-center gap-4">
-            <a href="#" className="text-primary-foreground/40 hover:text-accent transition-colors" aria-label="GitHub">
+            <a href="https://github.com/zenvara/zenvara" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/40 hover:text-accent transition-colors" aria-label="GitHub">
               <Github size={20} />
             </a>
-            <a href="#" className="text-primary-foreground/40 hover:text-accent transition-colors" aria-label="Discord">
+            <a href="https://discord.gg/zenvara" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/40 hover:text-accent transition-colors" aria-label="Discord">
               <MessageCircle size={20} />
             </a>
           </div>

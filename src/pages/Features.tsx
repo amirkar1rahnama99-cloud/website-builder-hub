@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Workflow, Eye, FunctionSquare, Shield, Waves, Plug, Brain, Lock, ChevronDown, ChevronUp } from "lucide-react";
 
@@ -9,8 +10,9 @@ const operatorPacks = [
   { name: "Converters", count: 7, tier: "All tiers", ops: ["csv-to-json", "csv-load", "csv-transform", "batch-json", "json-extract", "md-to-pdf", "xslt"], desc: "Transform between formats. CSV, JSON, XML, Markdown, PDF." },
   { name: "Mail", count: 2, tier: "All tiers", ops: ["email", "imap"], desc: "Send email via SMTP. Read and manage via IMAP." },
   { name: "Data", count: 8, tier: "Pro+", ops: ["state", "diff", "combine", "mssql", "mysql", "postgresql", "mongodb", "redshift"], desc: "Databases and state. SQL Server, MySQL, PostgreSQL, MongoDB, Redshift. State persistence between runs." },
-  { name: "Integration", count: 22, tier: "Pro+", ops: ["jira", "bitbucket", "github", "gitlab", "slack", "teams", "notify", "signal", "human-task", "soap", "zabbix", "keepass", "iis", "graphql", "swagger", "wsdl-soap", "npm", "and more..."], desc: "Connect to everything. Jira, GitHub, Slack, Teams, Zabbix, SOAP, GraphQL, Swagger auto-discovery." },
+  { name: "Integration", count: 19, tier: "Pro+", ops: ["jira", "bitbucket", "github", "gitlab", "slack", "teams", "notify", "signal", "human-task", "soap", "wsdl-soap", "swagger", "zabbix", "zabbix-sender", "keepass", "iis", "graphql", "npm", "dropbox"], desc: "Connect to everything. Jira, GitHub, Slack, Teams, Zabbix, SOAP, GraphQL, Swagger auto-discovery, Dropbox." },
   { name: "AI", count: 4, tier: "All tiers", ops: ["claude", "chatgpt", "gemini", "claude-cli"], desc: "Three LLM providers as first-class operators. AI within the discipline." },
+  { name: "Search", count: 4, tier: "All tiers", ops: ["web-search-duckduckgo", "web-search-google", "web-search-ollama", "web-search-stackoverflow"], desc: "Web search via DuckDuckGo, Google, Ollama, and StackOverflow. Bring the web into your pipelines." },
 ];
 
 const OperatorAccordion = ({ pack }: { pack: typeof operatorPacks[0] }) => {
@@ -83,6 +85,7 @@ const Features = () => {
 
   return (
     <Layout>
+      <SEO title="Features — Zenvara" description="57 operators across 8 categories, YAML-to-AST compiler, expression engine, AI integration, secrets management, and self-introspection." />
       {/* Hero */}
       <section className="bg-background py-20 md:py-32">
         <div className="container text-center">
@@ -90,7 +93,7 @@ const Features = () => {
             Everything you need. Nothing you don't.
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            56 operators, a real expression engine, built-in AI, and a deployment model that respects your infrastructure.
+            57 operators, a real expression engine, built-in AI, and a deployment model that respects your infrastructure.
           </p>
         </div>
       </section>
@@ -99,7 +102,7 @@ const Features = () => {
       <section className="bg-card py-20 md:py-28" id="operators" ref={ref1}>
         <div className={`container ${v1 ? "animate-fade-in" : "opacity-0"}`}>
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground text-center mb-3">
-            56 operators. 7 categories. Zero cross-dependencies.
+            57 operators. 8 categories. Zero cross-dependencies.
           </h2>
           <p className="text-center text-muted-foreground mb-12">Each pack is independent. One change rebuilds only that extension.</p>
           <div className="max-w-3xl mx-auto space-y-4">
@@ -178,7 +181,7 @@ const Features = () => {
               "Python and PowerShell scripts become first-class operators.",
               "Auto-generated type stubs from script metadata.",
               "Plugin discovery via [<OperatorFactory>] attribute — drop a DLL, get an operator.",
-              "7 independent extension packs — one operator change rebuilds only that extension.",
+              "8 independent extension packs — one operator change rebuilds only that extension.",
               "Package system — export jobs as ZIP, import, deploy via CI/CD API.",
             ].map((t) => (
               <div key={t} className="flex items-start gap-3 p-4">

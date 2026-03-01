@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import SEO from "@/components/SEO";
 import { ArrowLeft } from "lucide-react";
 
 const posts = [
@@ -11,7 +12,7 @@ const posts = [
     readTime: "8 min",
     tag: "Announcement",
     excerpt: "What happens when you build an orchestration platform from scratch in F#, with a real compiler, native AI operators, and a system that documents itself? Zenvara.",
-    body: "What happens when you build an orchestration platform from scratch in F#, with a real compiler, native AI operators, and a system that documents itself?\n\nYou get Zenvara.\n\n88,000 lines of F# code. 56 operators across 7 independent extension packs. 88 MCP tools that let AI agents reason about the entire platform. A YAML-to-AST compiler that catches errors before a single step runs.\n\nThis is not another integration platform. This is orchestration you can reason about.\n\nFull article coming soon.",
+    body: "What happens when you build an orchestration platform from scratch in F#, with a real compiler, native AI operators, and a system that documents itself?\n\nYou get Zenvara.\n\n88,000 lines of F# code. 57 operators across 8 independent extension packs. 88 MCP tools that let AI agents reason about the entire platform. A YAML-to-AST compiler that catches errors before a single step runs.\n\nThis is not another integration platform. This is orchestration you can reason about.\n\nFull article coming soon.",
   },
   {
     id: "why-fsharp",
@@ -47,6 +48,7 @@ const Blog = () => {
   if (post) {
     return (
       <Layout>
+        <SEO title={`${post.title} — Zenvara Blog`} description={post.excerpt} />
         <section className="bg-card py-16">
           <div className="container max-w-2xl">
             <button
@@ -71,6 +73,7 @@ const Blog = () => {
 
   return (
     <Layout>
+      <SEO title="Blog — Zenvara" description="Technical articles about data orchestration, F# engineering, AI integration, and enterprise automation." />
       <section className="bg-background py-20 md:py-32">
         <div className="container text-center">
           <h1 className="font-display font-light text-4xl md:text-5xl text-foreground mb-4">Blog</h1>
